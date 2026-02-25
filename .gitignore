@@ -1,0 +1,13 @@
+# Python / Backend
+__pycache__/
+venv/
+.env
+downloads/
+*.mp4
+*.mp3
+
+# Node / Frontend
+node_modules/
+.next/
+dist/
+.DS_Store
