@@ -74,7 +74,7 @@ async def download_video(
             }
         else:
             ydl_opts = {
-                'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio/best',
+                'format': 'best',
                 'outtmpl': temp_path,
                 'merge_output_format': 'mp4',
                 'cookiefile': 'cookies.txt',
