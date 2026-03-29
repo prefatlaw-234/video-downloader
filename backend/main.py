@@ -54,7 +54,11 @@ async def download_video(
     temp_path = os.path.join("downloads", f"{download_id}.%(ext)s")
     
     try:
-        with yt_dlp.YoutubeDL({'quiet': True, 'no_warnings': True}) as ydl:
+        with yt_dlp.YoutubeDL({
+            'quiet': True, 
+            'no_warnings': True,
+            'cookiefile': 'cookies.txt'
+            }) as ydl:
             info = ydl.extract_info(url, download=False)
             filename = info.get('title') or info.get('url') or 'video.mp4'
             print(filename)
